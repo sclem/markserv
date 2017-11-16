@@ -251,7 +251,7 @@ MathJax.Hub.Config({
           <body>
             <article class="markdown-body">${htmlBody}</article>
           </body>
-          <script src="http://localhost:35729/livereload.js?snipver=1"></script>
+          <script src="http://${flags.address}:35729/livereload.js?snipver=1"></script>
           <script>hljs.initHighlightingOnLoad();</script>`;
     } else {
       outputHtml = `
@@ -280,7 +280,7 @@ MathJax.Hub.Config({
               ${(footer ? '<footer>' + footer + '</footer>' : '')}
             </div>
           </body>
-          <script src="http://localhost:35729/livereload.js?snipver=1"></script>
+          <script src="http://${flags.address}:35729/livereload.js?snipver=1"></script>
           <script>hljs.initHighlightingOnLoad();</script>`;
     }
     resolve(outputHtml);
@@ -341,7 +341,7 @@ const compileAndSendDirectoryListing = (path, res) => {
             <sup><hr> Served by <a href="https://www.npmjs.com/package/markserv">MarkServ</a> | PID: ${process.pid}</sup>
           </article>
         </body>
-        <script src="http://localhost:35729/livereload.js?snipver=1"></script>`;
+        <script src="http://${flags.address}:35729/livereload.js?snipver=1"></script>`;
 
     // Log if verbose
 
